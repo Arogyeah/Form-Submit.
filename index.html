@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Info Form Submission</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>User Information Form</h2>
+    <form id="userForm">
+      <label for="name">Name <span style="color:red;">*</span></label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email <span style="color:red;">*</span></label>
+      <input type="email" id="email" required />
+      <small>Format: user@example.com</small>
+
+      <label for="age">Age <span style="color:red;">*</span></label>
+      <input type="number" id="age" min="1" max="100" required />
+
+      <label for="father">Father's Name <span style="color:red;">*</span></label>
+      <input type="text" id="father" required />
+
+      <label for="mother">Mother's Name <span style="color:red;">*</span></label>
+      <input type="text" id="mother" required />
+
+      <label for="dob_ad">Date of Birth (AD) <span style="color:red;">*</span></label>
+      <input type="date" id="dob_ad" max="2025-07-31" required />
+
+      <label for="marital">Marital Status <span style="color:red;">*</span></label>
+      <select id="marital" required>
+        <option value="">Select</option>
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Divorced">Divorced</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+
+    <div style="margin-top: 15px;">
+      <button onclick="clearForm()" class="btn-clear">Clear Form</button>
+      <button onclick="clearAllData()" class="btn-clear-data">Clear All Data</button>
+      <button onclick="exportToJSON()" class="btn-export">Export JSON</button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
